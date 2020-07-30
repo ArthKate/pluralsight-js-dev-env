@@ -6,10 +6,10 @@ environment:
 
   # install scripts. (runs after repo cloning)
   install:
-  # get the latest stable version of Node.js or io.js
-  -ps: Install-Product node $env:nodejs_version
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node $env:nodejs_version
   # install modules
-  -npm install
+  - npm install
 
   # Post-install test scripts.
   test_scripts:
@@ -17,7 +17,7 @@ environment:
     - node --version
     - npm --version
     3 run tests
-    -npm test
+    - npm test
 
 #Don't actually build.
 Build: off
